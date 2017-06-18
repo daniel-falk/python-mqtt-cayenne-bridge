@@ -34,7 +34,7 @@ class Mqtt(object):
                 self.client.connect(self.SERVER, keepalive=self.KEEP_ALIVE)
                 self.connected = True
             except socket.error:
-                logger("Failed to connect to local mqtt... Retrying in {} seconds".format(retry_time))
+                logger("Failed to connect to local mqtt... Retrying in {} seconds".format(self.retry_time))
                 sleep(self.retry_time)
                 self.retry_time = min(self.MAX_RETRY_TIME, self.retry_time*2)
 
