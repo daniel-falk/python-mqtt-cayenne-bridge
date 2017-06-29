@@ -45,4 +45,4 @@ try:
 except NoOptionError:
     max_retry_time = 60
 
-loc_mqtt = Mqtt(server, username, password, client_id, keepalive, min_retry_time, max_retry_time)
+loc_mqtt = Mqtt('Local MQTT', server, username, password, client_id, keepalive, min_retry_time, max_retry_time)

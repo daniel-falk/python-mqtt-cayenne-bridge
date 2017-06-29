@@ -1,0 +1,11 @@
+[Unit]
+Description=Bridge messages between Cayenne, mydevices.com, and local MQTT.
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/cayennebridge
+ExecStart=/home/pi/cayennebridge/.env/bin/python -mcayennebridge
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

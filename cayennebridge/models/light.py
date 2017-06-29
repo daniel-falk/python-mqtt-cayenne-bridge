@@ -1,6 +1,6 @@
 from cayennebridge.models.model import Model
 
-class HallLight(Model):
+class Light(Model):
 
     def __init__(self, loc_mqtt, cayenne):
         if not 'host' in cayenne:
@@ -13,7 +13,7 @@ class HallLight(Model):
             raise ValueException('No cayenne client_id specified')
 
         self.loc_mqtt = loc_mqtt
-        self.cayenne.update(cayenne)
+        self.cayenne = cayenne
 
         # Register for the feed-back commands
 
