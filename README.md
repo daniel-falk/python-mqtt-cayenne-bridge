@@ -13,8 +13,6 @@ pip install -e .
 
 ## Autostart with systemd
 
-Add a shellscript in your cayenne-bridge dir that will 
-
 Create init file:
 ```bash
 echo "[Unit]
